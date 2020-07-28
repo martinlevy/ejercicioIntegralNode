@@ -1,0 +1,79 @@
+¡Al fin es momento de codear!
+En base a las definiciones técnicas tomadas con el equipo deberás declarar la variable autos, la misma debe contener los siguientes vehículos:
+
+El primer auto es un Ford Fiesta Azul, del 2019, con 200 kilómetros, cuyo precio es 150000, disponible en 12 cuotas, con la patente APL123 que no está vendido.
+El segundo auto es un Toyota Corolla Blanco, del 2019, 0 kilómetro, cuyo precio es 100000, disponible en 14 cuotas, con la patente JJK116 que no esta vendido.
+Cada auto debe tener los siguientes atributos: marca, modelo, precio, km, color, cuotas, anio, patente, vendido.
+
+
+Seguimos
+Ahora que tenemos creada nuestra lista de autos y definida la manera de representar nuestra concesionaria, necesitamos crearla. El objeto concesionaria va a conocer a todo los autos y va disponer de las funcionalidades de buscar los mismos y de venderlos. Pero para no entrar en demasiado detalle general María propone trabajar en tres etapas y en cada una agregar valor, respondé a las necesidades de cada etapa.
+
+
+Etapa 1
+En esta primera etapa necesitamos requerir tu módulo autos que se encuentra en la misma carpeta del archivo donde estás trabajando.
+
+Además necesitarás crear un objeto literal llamado concesionaria que contendrá todas las funcionalidades que el cliente solicita.
+
+Por último, nuestro objeto literal debe tener un atributo llamado autos que contenga la lista de automóviles importada anteriormente.
+
+Etapa 2
+Ahora que la concesionaria tiene los autos es posible crear la funcionalidad buscarAuto que reciba por parámetro la patente y devuelva el auto al cual le corresponde. En caso de no encontrar el mismo deberá retornar null.
+
+Para que todo funcione tenés que agregar el código que escribiste en el ejercicio anterior.
+
+Etapa 3
+Ahora, María les pide que agreguen la funcionalidad de venderAuto que recibe la patente y en caso de encontrar al automóvil asignarle el estado de vendido.
+
+¿Cómo la resuelven?
+
+Recordatorio: Para comenzar debes agregar el código que escribiste en el ejercicio anterior. Para resolver esta nueva funcionalidad debes utilizar la función buscarAuto.
+Sumar más funcionalidades
+¡Genial! Dice María que el cliente está feliz con el trabajo que estamos realizando. Además de comentarle eso le mencionan que lógicamente ahora les gustaría sumar más funcionalidades.
+
+
+Funcionalidad extra
+La primera es poder contar como concesionaria con la habilidad de poder tener la lista de autos para la venta. A lo cual María cree que es una tarea sencilla que vos y Juan pueden encarar solos usando la función autosParaLaVenta, aunque por las dudas ella les recuerda que no deberían de aparecer los autos que ya fueron vendidos.
+
+Para comenzar debes agregar el código que escribiste en el ejercicio anterior, y tené en cuenta que estamos optimizando nuestro código, por lo cual deberíamos utilizar el método filter.
+
+Una nueva funcionalidad extra
+María contenta con el trabajo que realizaron les pide otra funcionalidad extra. Resulta que a la concesionaria le suelen preguntar muy seguido cuáles de los autos para la venta son 0 km. Tené en cuenta que María considera que un auto 0 km es aquel que tenga un kilometraje menor a 100. Vas a tener que desarrollar la funcionalidad autos0KM.
+
+¿Cómo podes resolver esto reutilizando la función autosParaLaVenta?
+
+Para comenzar debes agregar el código que escribiste en el ejercicio anterior.
+Más funcionalidades
+Luego de terminar un largo y exitoso día, vuelves a tu casa a descansar.  Al día siguiente al volver al trabajo ves a María con un café en la mano, estuvo trabajando toda la noche adelantando cosas y necesita que le des una mano en unas funcionalidades particulares que faltan resolver.
+
+
+Más funcionalidades
+Algo que el cliente le pidió es saber cuánto dinero generaron las ventas.
+
+Ahí María te pide que completes la función listaDeVentas que devuelve una lista que contiene el precio de venta de cada auto vendido. A esto Juan que está al lado tuyo se le escapó la frase "mmm.....estoy seguro que alguna función de arrays nos va a servir, pero no me acuerdo"
+
+Para comenzar debes agregar el código que escribiste en el ejercicio anterior.
+
+Total de ventas
+Terminada esta función ahora María te pide que resuelvas la funcionalidad de totalDeVentas, que justamente nos devuelva la sumatoria del valor de todas las ventas realizadas. Acá el único requerimiento técnico explícito es que utilices la función reduce, ¡a codear!.
+Agregando funcionalidades
+Muy contento el equipo por cómo viene el desarrollo por la tarde María te comenta que se agrega una funcionalidad muy importante, la de verificar si una persona puede comprar o no un auto. La misma permite al sistema definir si una persona al consultar por un auto puede comprarlo. Las personas solo sacan los autos en cuotas y tomando dos factores como condición de compra, una es el costo total, si el total de un auto excede lo que la persona considera caro no va a comprar el auto. Otra condición es su capacidad de pago en cuotas, si la capacidad de pago en cuotas supera al costo de la cuota va a poder pagarlo. Si ambas condiciones se cumplen se realiza la compra.
+
+Es por esto que María te pide que desarrolles la función puedeComprar que reciba por parámetro un auto y una persona y devuelva true si la misma puede comprar el auto.
+
+Una persona va a ser representada mediante un objeto literal de la siguiente forma:
+
+{
+nombre: “Juan”,
+capacidadDePagoEnCuotas: 20000,
+capacidadDePagoTotal: 100000
+}
+
+Para comenzar debes agregar el código que escribiste en el ejercicio anterior.
+¡Una gran idea!
+Al finalizar de desarrollar la nueva funcionalidad le propones al equipo que sería relativamente fácil agregar la funcionalidad que dada una persona se le pueda ofrecer fácilmente que autos puede comprar así no tiene que estar preguntando uno por uno. A Juan y María les encanta la idea, María se la menciona al cliente y esperan con ansias esa nueva funcionalidad.
+
+La última funcionalidad
+Ahora te comprometiste a realizarla así que manos a la obra. Hay que escribir la función autosQuePuedeComprar que recibe una persona y devuelve la lista de autos que puede comprar.
+
+Para comenzar debes agregar el código que escribiste en el ejercicio anterior.
