@@ -1,4 +1,5 @@
 const autos = require("./autos")
+const personas= require("./personas")
 let concesionaria = {
    autos: autos ,
  
@@ -38,14 +39,24 @@ listaDeVentas: function() {
    return totalVentasgig
 }
 */
-totalDeVentas: function (){
+/*totalDeVentas: function (){
    let totalVentas= this.listaDeVentas()
    if (totalVentas==[]){return 0}
-   else {totalVentas== this.listaDeVentas().reduce(function(acum,auto){return acum + auto.precio})
+   else {totalVentas== totalVentas.reduce(function(acum,auto){return acum + auto.precio},0)
    return totalVentas}
 }
+*/
+totalDeVentas: function(){
+   let totalVentas = this.listaDeVentas().reduce(function(acum,precio){return acum+precio},0)
+   return totalVentas
 
+},
+puedeComprar: function(auto,persona){
+   if (persona.capacidadDePagoTotal>auto.precio && persona.capacidadDePagoEnCuotas>(auto.precio/auto.cuotas))
+   {return true}
 }
+}
+
 
 //console.log(concesionaria.venderAuto("JJK116"))
 //console.log(concesionaria.autos[1])
@@ -53,8 +64,8 @@ totalDeVentas: function (){
 //console.log(concesionaria.autosParaLaVenta())
 //console.log(concesionaria.autos0KM())
 //console.log(concesionaria.listaDeVentas())
-console.log(concesionaria.totalDeVentas())
-
+//console.log(concesionaria.totalDeVentas())
+console.log(concesionaria.puedeComprar(concesionaria.autos[1],personas[1]))
 
 
 
