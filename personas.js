@@ -4,7 +4,7 @@ const personas =[
         capacidadDePagoEnCuotas: 10000000
 },
 {nombre: "andres",
-capacidadDePagoTotal: 100,
+capacidadDePagoTotal: 10000000,
     capacidadDePagoEnCuotas: 10000000
 }
 ]
